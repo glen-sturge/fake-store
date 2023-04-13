@@ -1,6 +1,12 @@
 import React from "react";
+import { useState } from "react";
 
 const NavBar = () => {
+  const [isActive, setIsActive] = useState(false);
+
+  const handleClick = () => {
+    setIsActive((current) => !current);
+  };
   return (
     <div className="nav-bar">
       <div className="search-bar">
@@ -15,8 +21,26 @@ const NavBar = () => {
         <div className="link">Contact Us</div>
       </div>
       <div className="login-signup">
-        <div className="login">Log in</div>
-        <div className="sign-up">Sign up</div>
+        <button
+          className="login-btn"
+          style={{
+            backgroundColor: !isActive ? "#d1552e" : "",
+            color: !isActive ? "white" : "",
+          }}
+          onClick={handleClick}
+        >
+          Log in
+        </button>
+        <button
+          className="signup-btn"
+          style={{
+            backgroundColor: isActive ? "#d1552e" : "",
+            color: isActive ? "white" : "",
+          }}
+          onClick={handleClick}
+        >
+          Sign up
+        </button>
       </div>
     </div>
   );
