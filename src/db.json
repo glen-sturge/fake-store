@@ -1,0 +1,21 @@
+{
+  "user-data": [
+    {
+      "userId": 1,
+      "username": "username1",
+      "password": "password",
+      "firstname": "firstname",
+      "lastname": "lastname",
+      "email": "username@somesite.com",
+      "phone": "777-111-1234",
+      "address": {
+        "street": "123 street st.",
+        "city": "Some City",
+        "province": "some province",
+        "postal-code": "A1A 2B2"
+      },
+      "cc-number": "4444111122223333",
+      "cart": {}
+    }
+  ]
+}

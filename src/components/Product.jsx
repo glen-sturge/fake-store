@@ -11,17 +11,13 @@ const Product = ({ product }) => {
   return (
     <div className="product-card" style={{}}>
       <div className="product-title">
-        <h3 style={{ marginBottom: "10px" }}>{product.title}</h3>
+        <h3>{product.title}</h3>
       </div>
       <div className="product-thumbnail">
         <img src={product.image} alt="Product" />
       </div>
       <div className="product-info">
-        <p
-          className="product-description" /*style={{ fontSize: "14px", marginBottom: "10px", height: "75px" }}*/
-        >
-          {truncDesc()}
-        </p>
+        <p className="product-description">{truncDesc()}</p>
         <p>
           <strong>Rating:</strong> {product.rating.rate}/5 (
           {product.rating.count} ratings)

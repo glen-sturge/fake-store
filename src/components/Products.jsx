@@ -3,18 +3,25 @@ import Product from "./Product";
 import { useState, useEffect } from "react";
 import "../App.css";
 
-const Products = () => {
+const Products = ({ category }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     async function fetchProducts() {
-      const response = await fetch("https://fakestoreapi.com/products");
+      if ((category = "all")) {
+        const response = await fetch(`https://fakestoreapi.com/products`);
+      } else {
+        const response = await fetch(
+          `https://fakestoreapi.com/products/category/${category}`
+        );
+      }
       const data = await response.json();
       setProducts(data);
+      console.log(products);
     }
 
     fetchProducts();
-  }, []);
+  }, [category]);
 
   return (
     <div className="products-gallery">
