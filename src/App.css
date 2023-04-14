@@ -213,6 +213,8 @@
 
 .link {
   margin: 0 20px 0 20px;
+  color: white;
+  text-decoration: none;
 }
 
 .link:hover {

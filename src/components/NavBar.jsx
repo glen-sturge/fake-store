@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [isActive, setIsActive] = useState(false);
@@ -24,8 +24,9 @@ const NavBar = () => {
         </div>
       </div>
       <div className="web-links">
-        {/* <Link to="/products">Shop</Link> */}
-        <div className="link">Shop</div>
+        <Link to="/shop" className="link">
+          Shop
+        </Link>
         <div className="link">Sale</div>
         <div className="link">Support</div>
         <div className="link">Contact Us</div>
