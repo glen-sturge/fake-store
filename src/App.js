@@ -20,7 +20,7 @@ function App() {
       {loggedIn ? "Logged In" : "Not Logged In"}
       <NumberInput />
       <NumberInput />
-      <Products category="jewelery" />
+      <Products category="all" />
 
       <Register />
       <br />
