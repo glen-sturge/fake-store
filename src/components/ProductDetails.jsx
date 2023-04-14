@@ -1,10 +1,13 @@
 import React from "react";
+import Product from "./Product";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const ProductDetails = () => {
   return (
     <div className="product-details">
       <div className="back-link">&#60; Back</div>
-      <div className="product-title2">TITLE</div>
+      <div className="product-title2">Title</div>
       <div className="product-id">ID #</div>
       <div className="product-image-container">
         <img src={require("../images/Mens-Henley-Tee.png")} width="500px"></img>

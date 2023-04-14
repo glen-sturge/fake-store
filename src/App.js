@@ -11,8 +11,8 @@ function App() {
       <NavBar />
       <ProductDetails />
       {/* <SaleBanner />
-      <ProductGrid /> */}
-      {/* <Products /> */}
+      <ProductGrid />  */}
+      <Products />
     </div>
   );
 }
