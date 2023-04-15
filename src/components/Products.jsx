@@ -13,7 +13,7 @@ const Products = ({ category }) => {
         response = await fetch(`https://fakestoreapi.com/products`);
       } else {
         response = await fetch(
-          `https://fakestoreapi.com/products/category/${category}`
+          `https://fakestoreapi.com/products/category/${category}` //electronics, jewelery, ...get the others
         );
       }
       const data = await response.json();
@@ -22,7 +22,7 @@ const Products = ({ category }) => {
     }
 
     fetchProducts();
-  }, [category]);
+  }, []);
 
   return (
     <div className="products-gallery">

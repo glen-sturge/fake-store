@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import Products from "./components/Products";
 import NumberInput from "./components/NumberInput";
@@ -8,7 +8,28 @@ import ReactDOM from "react-dom/client";
 // import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [userData, setUserData] = useState([]);
+
+  function addUser(newUser) {
+    const updatedState = [...userData, newUser];
+    console.log(updatedState);
+    setUserData(updatedState);
+  }
+
+  const showUserData = () => {
+    console.log(userData);
+  };
+
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  // Check if user is logged in
+  useEffect(() => {
+    if (localStorage.getItem("isLoggedIn") === "true") {
+      const user = JSON.parse(localStorage.getItem("userData"));
+      console.log(`Welcome back, ${user.firstName}!`);
+    }
+  }, [loggedIn]);
+
   return (
     // <BrowserRouter>
     // <Routes>
@@ -22,9 +43,10 @@ function App() {
       <NumberInput />
       <Products category="all" />
 
-      <Register />
+      <Register addUser={addUser} users={userData} />
       <br />
-      <SignIn />
+      <SignIn users={userData} login={setLoggedIn} />
+      <button onClick={showUserData}>log user data</button>
     </div>
   );
 }

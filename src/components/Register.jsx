@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../db.json";
 
-const Register = () => {
+const Register = ({ addUser, users }) => {
   //values for registration
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -12,7 +12,7 @@ const Register = () => {
   const [phone, setPhone] = useState("");
 
   const handleSubmit = (e) => {
-    // Return json in format with each field as a key from input (console for now.)
+    // Return object with each field as a key from input.
     const data = {
       firstName,
       lastName,
@@ -32,6 +32,10 @@ const Register = () => {
     }
     if (!lastName) {
       alert("Please enter your last name.");
+      return;
+    }
+    if (users.find((user) => user.email === email)) {
+      alert("Email already associated with another account.");
       return;
     }
     if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
@@ -60,6 +64,7 @@ const Register = () => {
 
     //log for now, will return/save to db.
     console.log(data);
+    addUser(data);
 
     // Clear the input fields
     setFirstName("");
