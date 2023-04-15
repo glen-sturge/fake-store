@@ -29,6 +29,10 @@ const SignIn = ({ users, login }) => {
     localStorage.setItem("isLoggedIn", "true");
     localStorage.setItem("userData", JSON.stringify(userDataToSave));
     login(true);
+
+    //clear form
+    setEmail("");
+    setPassword("");
   };
 
   return (

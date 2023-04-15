@@ -9,7 +9,7 @@ const Products = ({ category }) => {
   useEffect(() => {
     async function fetchProducts() {
       let response;
-      if ((category = "all")) {
+      if (category === "all") {
         response = await fetch(`https://fakestoreapi.com/products`);
       } else {
         response = await fetch(
@@ -17,8 +17,8 @@ const Products = ({ category }) => {
         );
       }
       const data = await response.json();
+      // console.log(data);
       setProducts(data);
-      console.log(products);
     }
 
     fetchProducts();

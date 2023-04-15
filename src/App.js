@@ -9,7 +9,7 @@ import ReactDOM from "react-dom/client";
 
 function App() {
   const [userData, setUserData] = useState([]);
-
+  const [category, setCategory] = useState("men's clothing"); //"all", "electronics", "jewelery", "women's clothing", "men's clothing"
   function addUser(newUser) {
     const updatedState = [...userData, newUser];
     console.log(updatedState);
@@ -30,6 +30,13 @@ function App() {
     }
   }, [loggedIn]);
 
+  const logOut = () => {
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("userData");
+    setLoggedIn(false);
+    console.log("You have been logged out.");
+  };
+
   return (
     // <BrowserRouter>
     // <Routes>
@@ -41,12 +48,14 @@ function App() {
       {loggedIn ? "Logged In" : "Not Logged In"}
       <NumberInput />
       <NumberInput />
-      <Products category="all" />
+      <Products category={category} />
 
       <Register addUser={addUser} users={userData} />
       <br />
       <SignIn users={userData} login={setLoggedIn} />
       <button onClick={showUserData}>log user data</button>
+      <br />
+      <button onClick={logOut}>log out user</button>
     </div>
   );
 }
