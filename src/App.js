@@ -1,16 +1,18 @@
 import "./App.css";
-import NavBar from "./components/NavBar";
 import ProductDetails from "./components/ProductDetails";
 import ProductGrid from "./components/ProductGrid";
 import Products from "./components/Products";
 import SaleBanner from "./components/SaleBanner";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <Router>
       <div className="App">
-        {/* <Header/> */}
+        <Header />
         <NavBar />
         <Routes>
           <Route
@@ -24,7 +26,7 @@ function App() {
           />
           <Route path="/shop" element={<Products />} />
         </Routes>
-        {/* <Footer/> */}
+        <Footer />
       </div>
     </Router>
   );
