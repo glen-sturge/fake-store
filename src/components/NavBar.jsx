@@ -24,12 +24,19 @@ const NavBar = () => {
         </div>
       </div>
       <div className="web-links">
+        <Link to="/" className="link">
+          Home
+        </Link>
         <Link to="/shop" className="link">
           Shop
         </Link>
         <div className="link">Sale</div>
-        <div className="link">Support</div>
-        <div className="link">Contact Us</div>
+        <Link to="/support" className="link">
+          Support
+        </Link>
+        <Link to="/contact" className="link">
+          Contact
+        </Link>
       </div>
       <div className="login-signup">
         <button

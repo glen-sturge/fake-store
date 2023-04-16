@@ -7,6 +7,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
+import Contact from "./components/Contact";
+import Support from "./components/Support";
+
 
 function App() {
   return (
@@ -25,6 +28,8 @@ function App() {
             }
           />
           <Route path="/shop" element={<Products />} />
+          <Route path="/support" element={<Support />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>
