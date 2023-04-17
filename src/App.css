@@ -96,6 +96,7 @@ a {
   flex-wrap: wrap;
 }
 
+glen-updates
 /* Number Input With Buttons */
 .number-input {
   display: flex;
@@ -253,45 +254,172 @@ select {
 .sale-text-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 40px;
 }
 
+.number-input input {
+  border: none;
+  background-color: #d1552e;
+  color: #fff;
+  height: 90%;
+  width: 60px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 2em;
+  border-radius: 5px;
+  margin-right: 2px;
+}
+
+.number-input-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.number-input-buttons button {
+  background-color: #fff;
+  border: none;
+  color: #d1552e;
+  font-weight: 700;
+  border-radius: 5px;
+  height: 35%;
+  width: 30px;
+}
+
+/* Webkit browsers like Safari and Chrome */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Registration form */
+.register-form {
+  box-shadow: #0000002c 8px 8px;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 635px;
+  height: 644px;
+  background-color: #f0f0f0;
+  margin: 10px;
+}
+
+.register-form h1 {
+  font-size: 3em;
+  font-weight: 500;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.register-form p {
+  font-size: small;
+  color: #8c8c8c;
+}
+
+.register-form button {
+  background-color: #d1552e;
+  width: 160px;
+  height: 35px;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  margin: 40px;
+  cursor: pointer;
+}
+
+.register-double {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.register-form input,
+select {
+  box-shadow: #0000002c 0 2px;
+  padding: 10px;
+  border: #adadad solid 1px;
+  margin: 10px 0;
+  border-radius: 10px;
+  height: 49px;
+  width: 100%;
+}
+
+.register-double input,
+select {
+  width: 49.5%;
+}
+
+/* SignIn form */
+.sign-in-form {
+  box-shadow: #0000002c 8px 8px;
+  border-radius: 20px;
+  padding: 40px;
+  width: 635px;
+  height: 475px;
+  background-color: #f0f0f0;
+  margin: 10px;
+}
+
+.sign-in-form h1 {
+  font-size: 3em;
+  font-weight: 500;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.sign-in-form p {
+  font-size: small;
+  color: #8c8c8c;
+}
+
+.sign-in-inputs {
+  margin: 35px 0 10px 0;
+}
+
+.sign-in-form input {
+  box-shadow: #0000002c 0 2px;
+  padding: 10px;
+  border: #adadad solid 1px;
+  margin: 0 0 10px 0;
+  border-radius: 10px;
+  height: 49px;
+  width: 100%;
+}
+
+.sign-in-form button {
+  background-color: #d1552e;
+  width: 160px;
+  height: 35px;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  margin: 40px;
+  cursor: pointer;
+}
+
+.sign-in-form .dont-have {
+  color: black;
+}
+/* Homepage Styling */
+/* Sale Banner */
 .sale-text {
   font-family: "Judson", serif;
   font-size: 48px;
-  margin-right: 40px;
-  height: 100px;
   font-weight: 200;
-}
-
-.discount-amount {
-  font-family: "Judson", serif;
-  font-size: 96px;
-  height: 100px;
-  padding-top: 10px;
-  font-weight: 100;
-}
-
-.sale-text-small {
-  font-family: "Judson", serif;
-  font-size: 24px;
-  height: 100px;
-  padding-top: 30px;
-  margin-left: 10px;
+  margin-top: 10px;
 }
 
 .sale-text2 {
   font-family: "Judson", serif;
-  font-size: 48px;
-  margin-left: 40px;
-  height: 100px;
-  padding-top: 40px;
+  font-size: 16px;
   font-weight: 200;
 }
 
 .sale-items {
   display: flex;
   justify-content: space-between;
-  margin: 40px 350px 20px 350px;
+  margin: 20px 350px 20px 350px;
 }
 
 .shop-now-link {
@@ -523,7 +651,8 @@ select {
 }
 
 .contact-info-container {
-  background-color: rgba(209, 85, 46, 0.9);
+  background-color: #d1552e;
+  color: white;
   margin: auto;
   width: fit-content;
   padding: 20px;
@@ -719,4 +848,27 @@ hr {
   height: 40px;
   min-width: 280px;
   max-width: 350px;
+}
+
+/* Featured Page */
+
+.featured-page {
+  font-family: "Judson", serif;
+  margin: 30px 50px 30px 50px;
+  width: fit-content;
+  text-align: left;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  color: black;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
