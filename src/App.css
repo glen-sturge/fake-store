@@ -400,7 +400,7 @@
 
 .support-faq {
   margin-top: 10px;
-=======
+}
 /* Header component styling */
 
 .header {
@@ -540,5 +540,4 @@ hr {
   height: 40px;
   min-width: 280px;
   max-width: 350px;
-
 }
