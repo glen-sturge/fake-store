@@ -11,10 +11,29 @@ import NavBar from "./components/NavBar";
 import Contact from "./components/Contact";
 import Support from "./components/Support";
 
-
 function App() {
+  const [products, setProducts] = useState([]);
   const [userData, setUserData] = useState([]);
-  const [category, setCategory] = useState("men's clothing"); //"all", "electronics", "jewelery", "women's clothing", "men's clothing"
+  const [category, setCategory] = useState("all"); //"all", "electronics", "jewelery", "women's clothing", "men's clothing"
+
+  useEffect(() => {
+    async function fetchProducts() {
+      let response;
+      if (category === "all") {
+        response = await fetch(`https://fakestoreapi.com/products`);
+      } else {
+        response = await fetch(
+          `https://fakestoreapi.com/products/category/${category}`
+        );
+      }
+      const data = await response.json();
+      // console.log(data);
+      setProducts(data);
+    }
+
+    fetchProducts();
+  }, []);
+
   function addUser(newUser) {
     const updatedState = [...userData, newUser];
     console.log(updatedState);
@@ -43,25 +62,26 @@ function App() {
   };
 
   return (
-
     <Router>
       <div className="App">
         <Header />
         <NavBar />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <SaleBanner />
-                <ProductGrid />
-              </>
-            }
-          />
-          <Route path="/shop" element={<Products />} />
-          <Route path="/support" element={<Support />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <div className="content">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <SaleBanner />
+                  <ProductGrid />
+                </>
+              }
+            />
+            <Route path="/shop" element={<Products products={products} />} />
+            <Route path="/support" element={<Support />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
         <Footer />
       </div>
     </Router>

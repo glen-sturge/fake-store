@@ -15,6 +15,10 @@ a {
   text-align: center;
 }
 
+.content {
+  min-height: calc(80vh - 170px);
+}
+
 /* Product component styling */
 .product-card {
   background-color: white;
@@ -92,7 +96,6 @@ a {
   flex-wrap: wrap;
 }
 
- glen-updates
 /* Number Input With Buttons */
 .number-input {
   display: flex;
@@ -243,7 +246,8 @@ select {
 
 .sign-in-form .dont-have {
   color: black;
-=======
+}
+
 /* Homepage Styling */
 /* Sale Banner */
 .sale-text-wrapper {
@@ -300,9 +304,13 @@ select {
 /* Product Categories Grid */
 .product-categories {
   background-color: rgba(51, 51, 51, 1);
+  display: flex;
+  justify-content: center;
 }
 
 .product-grid {
+  max-width: 1000px;
+  width: 100%;
   display: grid;
   justify-content: space-between;
   grid-template-columns: auto auto;
@@ -560,7 +568,8 @@ select {
 
 .support-faq {
   margin-top: 10px;
-=======
+}
+
 /* Header component styling */
 
 .header {
@@ -593,13 +602,22 @@ select {
 }
 
 /* Footer styling*/
-.footer {
+.footer-wrapper {
+  width: 100%;
   background-color: #424046;
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding-block: 30px;
+  height: 20vh;
+  max-width: 1250px;
+  width: 100%;
 }
 
 .footer-top {
@@ -609,9 +627,9 @@ select {
 }
 
 .footer-bottom {
-  display: flex;
+  /* display: flex; */
   width: 100%;
-  border: #97db64 1px solid;
+  /* border: #97db64 1px solid; */
 }
 
 #left,
@@ -619,7 +637,7 @@ select {
 #right {
   width: 33%;
   text-align: left;
-  padding-left: 30px;
+  /* padding-left: 30px; */
 }
 
 #left {
@@ -677,6 +695,7 @@ select {
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-top: 10px;
 }
 
 hr {
