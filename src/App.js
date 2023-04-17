@@ -10,6 +10,7 @@ import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 import Contact from "./components/Contact";
 import Support from "./components/Support";
+import Featured from "./components/Featured";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -67,6 +68,7 @@ function App() {
         <Header />
         <NavBar setCategory={setCategory} />
         <div className="content">
+
           <Routes>
             <Route
               path="/"
@@ -78,9 +80,11 @@ function App() {
               }
             />
             <Route path="/shop" element={<Products products={products} />} />
+            <Route path="/featured" element={<Featured />} />
             <Route path="/support" element={<Support />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
+
         </div>
         <Footer />
       </div>

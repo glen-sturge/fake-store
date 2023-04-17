@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Modal from "./SignInModal";
+import RegisterModal from "./RegisterModal";
 
 const NavBar = ({ setCategory }) => {
   const [isActive, setIsActive] = useState(false);
@@ -9,9 +11,15 @@ const NavBar = ({ setCategory }) => {
     setIsActive((current) => !current);
   };
 
+
   const handleShopClick = () => {
     setCategory("all");
   };
+
+  const [show, setShow] = useState(false);
+
+  const [show2, setShow2] = useState(false);
+
 
   return (
     <div className="nav-bar">
@@ -35,7 +43,9 @@ const NavBar = ({ setCategory }) => {
         <Link to="/shop" className="link" onClick={handleShopClick}>
           Shop
         </Link>
-        <div className="link">Sale</div>
+        <Link to="/featured" className="link">
+          Featured
+        </Link>
         <Link to="/support" className="link">
           Support
         </Link>
@@ -50,21 +60,25 @@ const NavBar = ({ setCategory }) => {
             backgroundColor: !isActive ? "#d1552e" : "",
             color: !isActive ? "white" : "",
           }}
-          onClick={handleClick}
+          onClick={() => setShow(true)}
         >
           Log in
         </button>
+
         <button
           className="signup-btn"
           style={{
             backgroundColor: isActive ? "#d1552e" : "",
             color: isActive ? "white" : "",
           }}
-          onClick={handleClick}
+          // onClick={handleClick}
+          onClick={() => setShow2(true)}
         >
           Sign up
         </button>
       </div>
+      <Modal onClose={() => setShow(false)} show={show} />
+      <RegisterModal onClose={() => setShow2(false)} show2={show2} />
     </div>
   );
 };

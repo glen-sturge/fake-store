@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 function NumberInput() {
   const [value, setValue] = useState(0);
 
