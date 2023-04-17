@@ -1,11 +1,16 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+import ProductDetails from "./components/ProductDetails";
+import ProductGrid from "./components/ProductGrid";
 import Products from "./components/Products";
-import NumberInput from "./components/NumberInput";
-import Register from "./components/Register";
-import SignIn from "./components/SignIn";
-import ReactDOM from "react-dom/client";
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SaleBanner from "./components/SaleBanner";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import NavBar from "./components/NavBar";
+import Contact from "./components/Contact";
+import Support from "./components/Support";
+
 
 function App() {
   const [userData, setUserData] = useState([]);
@@ -38,24 +43,28 @@ function App() {
   };
 
   return (
-    // <BrowserRouter>
-    // <Routes>
-    //   <Route path="/" element={<home/>}/>
-    //   <Route path="category" element={<home/>}/>
-    // </Routes>
-    // </BrowserRouter>
-    <div className="App">
-      {loggedIn ? "Logged In" : "Not Logged In"}
-      <NumberInput />
-      <Products category={category} />
 
-      <Register addUser={addUser} users={userData} />
-      <br />
-      <SignIn users={userData} login={setLoggedIn} />
-      <button onClick={showUserData}>log user data</button>
-      <br />
-      <button onClick={logOut}>log out user</button>
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <NavBar />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <SaleBanner />
+                <ProductGrid />
+              </>
+            }
+          />
+          <Route path="/shop" element={<Products />} />
+          <Route path="/support" element={<Support />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
