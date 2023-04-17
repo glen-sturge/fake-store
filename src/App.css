@@ -249,44 +249,6 @@ select {
   color: black;
 }
 
-/* Homepage Styling */
-/* Sale Banner */
-.sale-text-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-}
-
-.number-input input {
-  border: none;
-  background-color: #d1552e;
-  color: #fff;
-  height: 90%;
-  width: 60px;
-  text-align: center;
-  font-weight: 500;
-  font-size: 2em;
-  border-radius: 5px;
-  margin-right: 2px;
-}
-
-.number-input-buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.number-input-buttons button {
-  background-color: #fff;
-  border: none;
-  color: #d1552e;
-  font-weight: 700;
-  border-radius: 5px;
-  height: 35%;
-  width: 30px;
-}
-
 /* Webkit browsers like Safari and Chrome */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -403,6 +365,10 @@ select {
 }
 /* Homepage Styling */
 /* Sale Banner */
+.sale-banner {
+  margin-bottom: 20px;
+}
+
 .sale-text {
   font-family: "Judson", serif;
   font-size: 48px;
@@ -426,7 +392,6 @@ select {
   font-family: "Judson", serif;
   font-size: 24px;
   color: #5c5c5c;
-  margin-bottom: 20px;
 }
 
 /* Product Categories Grid */

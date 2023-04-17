@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const SaleBanner = () => {
   return (
-    <div>
+    <div className="sale-banner">
       <div className="sale-text-wrapper">
         <h2 className="sale-text">THIS WEEKS TOP SELLERS!</h2>
         <h2 className="sale-text2">
@@ -29,7 +30,9 @@ const SaleBanner = () => {
           ></img>
         </div>
       </div>
-      <div className="shop-now-link">SEE MORE</div>
+      <Link to="/featured" className="shop-now-link">
+        SEE MORE
+      </Link>
     </div>
   );
 };
