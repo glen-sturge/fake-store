@@ -47,7 +47,6 @@ function App() {
     <div className="App">
       {loggedIn ? "Logged In" : "Not Logged In"}
       <NumberInput />
-      <NumberInput />
       <Products category={category} />
 
       <Register addUser={addUser} users={userData} />

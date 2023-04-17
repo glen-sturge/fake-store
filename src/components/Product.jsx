@@ -9,7 +9,7 @@ const Product = ({ product }) => {
   };
 
   return (
-    <div className="product-card" style={{}}>
+    <div className="product-card">
       <div className="product-title">
         <h3>{product.title}</h3>
       </div>

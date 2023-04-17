@@ -16,12 +16,14 @@ const SignIn = ({ users, login }) => {
       return;
     }
     if (!users.find((user) => user.password === password)) {
-      alert("Passwords do not match.");
+      alert("Passwords do not match records.");
       return;
     }
 
+    //take the password out.
     const userData = users.find((user) => user.email === email);
-    console.log(userData);
+    // console.log(userData);
+
     const { password: rename, ...userDataToSave } = userData;
     console.log(userDataToSave);
 
