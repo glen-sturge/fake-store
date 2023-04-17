@@ -659,6 +659,10 @@ select {
 }
 
 /* Support Page */
+.support-page-wrapper {
+  display: flex;
+  justify-content: center;
+}
 .support-page {
   font-family: "Judson", serif;
   margin: 30px 50px 30px 50px;
