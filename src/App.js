@@ -33,7 +33,7 @@ function App() {
     }
 
     fetchProducts();
-  }, []);
+  }, [category]);
 
   function addUser(newUser) {
     const updatedState = [...userData, newUser];
@@ -66,23 +66,25 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <NavBar />
+        <NavBar setCategory={setCategory} />
         <div className="content">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <SaleBanner />
-                <ProductGrid />
-              </>
-            }
-          />
-          <Route path="/shop" element={<Products products={products} />} />
-          <Route path="/featured" element={<Featured />} />
-          <Route path="/support" element={<Support />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <SaleBanner />
+                  <ProductGrid setCategory={setCategory} />
+                </>
+              }
+            />
+            <Route path="/shop" element={<Products products={products} />} />
+            <Route path="/featured" element={<Featured />} />
+            <Route path="/support" element={<Support />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+
         </div>
         <Footer />
       </div>

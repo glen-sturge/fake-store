@@ -4,16 +4,22 @@ import { Link } from "react-router-dom";
 import Modal from "./SignInModal";
 import RegisterModal from "./RegisterModal";
 
-const NavBar = () => {
+const NavBar = ({ setCategory }) => {
   const [isActive, setIsActive] = useState(false);
 
   const handleClick = () => {
     setIsActive((current) => !current);
   };
 
+
+  const handleShopClick = () => {
+    setCategory("all");
+  };
+
   const [show, setShow] = useState(false);
 
   const [show2, setShow2] = useState(false);
+
 
   return (
     <div className="nav-bar">
@@ -34,7 +40,7 @@ const NavBar = () => {
         <Link to="/" className="link">
           Home
         </Link>
-        <Link to="/shop" className="link">
+        <Link to="/shop" className="link" onClick={handleShopClick}>
           Shop
         </Link>
         <Link to="/featured" className="link">
