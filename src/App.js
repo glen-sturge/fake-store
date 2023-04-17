@@ -66,7 +66,7 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <NavBar addUser={addUser} users={userData} />
+        <NavBar addUser={addUser} users={userData} login={setLoggedIn} />
         <div className="content">
           <Routes>
             <Route

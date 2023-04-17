@@ -7,8 +7,8 @@ const RegisterModal = ({ onClose, show2, addUser, users }) => {
   }
 
   return (
-    <div class="modal" onClick={onClose}>
-      <div class="modal-content" onClick={(e) => e.stopPropagation()}>
+    <div className="modal" onClick={onClose}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <Register addUser={addUser} users={users} />
       </div>
     </div>

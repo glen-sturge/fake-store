@@ -1,15 +1,15 @@
 import React from "react";
 import SignIn from "./SignIn";
 
-const Modal = (props) => {
-  if (!props.show) {
+const Modal = ({ onClose, show, users, login }) => {
+  if (!show) {
     return null;
   }
 
   return (
-    <div class="modal" onClick={props.onClose}>
-      <div class="modal-content" onClick={(e) => e.stopPropagation()}>
-        <SignIn />
+    <div className="modal" onClick={onClose}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <SignIn users={users} login={login} />
       </div>
     </div>
   );
