@@ -32,7 +32,7 @@ function App() {
     }
 
     fetchProducts();
-  }, []);
+  }, [category]);
 
   function addUser(newUser) {
     const updatedState = [...userData, newUser];
@@ -65,7 +65,7 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <NavBar />
+        <NavBar setCategory={setCategory} />
         <div className="content">
           <Routes>
             <Route
@@ -73,7 +73,7 @@ function App() {
               element={
                 <>
                   <SaleBanner />
-                  <ProductGrid />
+                  <ProductGrid setCategory={setCategory} />
                 </>
               }
             />

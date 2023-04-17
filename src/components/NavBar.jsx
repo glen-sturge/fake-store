@@ -2,12 +2,17 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const NavBar = () => {
+const NavBar = ({ setCategory }) => {
   const [isActive, setIsActive] = useState(false);
 
   const handleClick = () => {
     setIsActive((current) => !current);
   };
+
+  const handleShopClick = () => {
+    setCategory("all");
+  };
+
   return (
     <div className="nav-bar">
       <div className="search-bar">
@@ -27,7 +32,7 @@ const NavBar = () => {
         <Link to="/" className="link">
           Home
         </Link>
-        <Link to="/shop" className="link">
+        <Link to="/shop" className="link" onClick={handleShopClick}>
           Shop
         </Link>
         <div className="link">Sale</div>
