@@ -16,18 +16,21 @@ const SaleBanner = () => {
             <img
               className="backpack-image"
               src={require("../images/BackPackImage.png")}
+              alt="backpack"
             ></img>
           </div>
           <div>
             <img
               className="dragon-bracelet-image"
               src={require("../images/Dragon-Bracelet-Image.png")}
+              alt="dragon-bracelet"
             ></img>
           </div>
           <div>
             <img
               className="monitor-image"
               src={require("../images/Monitor-Image.png")}
+              alt="monitor"
             ></img>
           </div>
         </div>
