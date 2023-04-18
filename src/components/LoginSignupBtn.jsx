@@ -3,7 +3,7 @@ import { useState } from "react";
 import Modal from "./SignInModal";
 import RegisterModal from "./RegisterModal";
 
-const LoginSignupBtn = () => {
+const LoginSignupBtn = ({ addUser, users, login }) => {
   const [isActive, setIsActive] = useState(false);
 
   const handleClick = () => {
@@ -37,8 +37,19 @@ const LoginSignupBtn = () => {
       >
         Sign up
       </button>
-      <Modal onClose={() => setShow(false)} show={show} />
-      <RegisterModal onClose={() => setShow2(false)} show2={show2} />
+      <Modal
+        onClose={() => setShow(false)}
+        show={show}
+        addUser={addUser}
+        users={users}
+        login={login}
+      />
+      <RegisterModal
+        onClose={() => setShow2(false)}
+        show2={show2}
+        addUser={addUser}
+        users={users}
+      />
     </div>
   );
 };
