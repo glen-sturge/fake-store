@@ -1,7 +1,7 @@
 import React from "react";
 import SignIn from "./SignIn";
 
-const Modal = ({ onClose, show, users, login }) => {
+const Modal = ({ onClose, show, addUser, users, login }) => {
   if (!show) {
     return null;
   }

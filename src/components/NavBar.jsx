@@ -7,11 +7,23 @@ const NavBar = ({ addUser, users, login, setCategory }) => {
     setCategory("all");
   };
 
+  // const logOut = () => {
+  //   localStorage.removeItem("isLoggedIn");
+  //   localStorage.removeItem("userData");
+  //   setLoggedIn(false);
+  //   console.log("You have been logged out.");
+  // };
+
   const checkLogin = (loggedIn) => {
     if (loggedIn === true) {
-      return <div>First Name + Last Name</div>; // Insert user's name here
+      return (
+        <div>
+          <div className="username">{users.firstName}</div>
+          <div>{/* <button onClick={logOut()}>Log Out</button> */}</div>
+        </div>
+      );
     } else {
-      return <LoginSignupBtn />;
+      return <LoginSignupBtn addUser={addUser} users={users} login={login} />;
     }
   };
 
