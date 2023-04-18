@@ -365,7 +365,17 @@ select {
 }
 /* Homepage Styling */
 /* Sale Banner */
+.sale-banner-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .sale-banner {
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 20px;
 }
 
@@ -383,9 +393,10 @@ select {
 }
 
 .sale-items {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  margin: 20px 350px 20px 350px;
+  margin: 20px 0px 20px 0px;
 }
 
 .shop-now-link {
@@ -433,12 +444,21 @@ select {
 }
 
 /* Navigation Bar */
+.nav-bar-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #333333;
+}
+
 .nav-bar {
   background-color: #333333;
   color: white;
   display: flex;
   justify-content: space-between;
   height: 45px;
+  max-width: 1250px;
+  width: 100%;
 }
 
 .search-bar {
@@ -639,6 +659,10 @@ select {
 }
 
 /* Support Page */
+.support-page-wrapper {
+  display: flex;
+  justify-content: center;
+}
 .support-page {
   font-family: "Judson", serif;
   margin: 30px 50px 30px 50px;

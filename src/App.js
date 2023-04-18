@@ -33,7 +33,7 @@ function App() {
     }
 
     fetchProducts();
-  }, []);
+  }, [category]);
 
   function addUser(newUser) {
     const updatedState = [...userData, newUser];
@@ -41,6 +41,8 @@ function App() {
     setUserData(updatedState);
   }
 
+
+  //For testing
   const showUserData = () => {
     console.log(userData);
   };
@@ -74,7 +76,7 @@ function App() {
               element={
                 <>
                   <SaleBanner />
-                  <ProductGrid />
+                  <ProductGrid setCategory={setCategory} />
                 </>
               }
             />
