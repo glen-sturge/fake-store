@@ -42,7 +42,6 @@ function App() {
     setUserData(updatedState);
   }
 
-
   //For testing
   const showUserData = () => {
     console.log(userData);
@@ -69,7 +68,12 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <NavBar addUser={addUser} users={userData} login={setLoggedIn} />
+        <NavBar
+          addUser={addUser}
+          users={userData}
+          login={setLoggedIn}
+          setCategory={setCategory}
+        />
         <div className="content">
           <Routes>
             <Route
