@@ -549,10 +549,6 @@ select {
   font-size: 48px;
 }
 
-.product-id {
-  font-size: 36px;
-}
-
 .product-image-container {
   background-color: #d9d9d9;
   padding: 20px;
@@ -581,21 +577,38 @@ select {
 
 .size-container {
   display: flex;
+  justify-items: center;
+  align-items: center;
+  width: 300px;
+  border: yellow 1px solid;
 }
 
-.dropdown-size {
-  align-self: center;
-  margin-left: 10px;
-}
+/* .dropdown-size {
+  align-items: center;
+  width: 250px;
+  height: 180;
+} */
 
 .size {
   text-align: left;
   font-size: 20px;
 }
 
+.product-quantity {
+  width: 50px;
+}
+
+.quantity-select {
+  width: 120px;
+  height: 50px;
+}
+
 .quantity-picker {
   align-self: center;
   margin-left: 10px;
+  width: 220px;
+  border-radius: 50;
+  border: green 1px solid;
 }
 
 .product-details-price {
