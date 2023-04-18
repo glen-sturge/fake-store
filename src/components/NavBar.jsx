@@ -1,25 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import LoginSignupBtn from "./LoginSignupBtn";
+import { useState } from "react";
 
-const NavBar = ({ addUser, users, login, setCategory }) => {
+const NavBar = ({ addUser, users, login, setCategory, loggedIn, logOut }) => {
   const handleShopClick = () => {
     setCategory("all");
   };
 
-  // const logOut = () => {
-  //   localStorage.removeItem("isLoggedIn");
-  //   localStorage.removeItem("userData");
-  //   setLoggedIn(false);
-  //   console.log("You have been logged out.");
-  // };
+  const user = JSON.parse(localStorage.getItem("userData"));
 
   const checkLogin = (loggedIn) => {
     if (loggedIn === true) {
       return (
-        <div>
-          <div className="username">{users.firstName}</div>
-          <div>{/* <button onClick={logOut()}>Log Out</button> */}</div>
+        <div className="logged-in-wrapper">
+          <div className="username">
+            <i>
+              {user.firstName} &nbsp;
+              {user.lastName}
+            </i>
+          </div>
+          <div>
+            <button className="logout-btn" onClick={logOut}>
+              Log Out
+            </button>
+          </div>
         </div>
       );
     } else {
@@ -60,7 +65,7 @@ const NavBar = ({ addUser, users, login, setCategory }) => {
             Contact
           </Link>
         </div>
-        <div>{checkLogin()}</div>
+        <div>{checkLogin(loggedIn)}</div>
       </div>
     </div>
   );

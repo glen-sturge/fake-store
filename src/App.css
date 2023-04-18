@@ -443,6 +443,20 @@ select {
 }
 
 /* Navigation Bar */
+.logged-in-wrapper {
+  display: flex;
+  margin-top: 10px;
+}
+
+.username {
+  margin-right: 10px;
+  margin-top: 2px;
+}
+
+.logout-btn {
+  padding: 2px;
+}
+
 .nav-bar-wrapper {
   display: flex;
   justify-content: center;
