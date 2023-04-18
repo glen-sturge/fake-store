@@ -3,20 +3,16 @@ import Product from "./Product";
 import { useState } from "react";
 import { useEffect } from "react";
 
-const ProductDetails = () => {
+const ProductDetails = ({ product }) => {
   return (
     <div className="product-details">
       <div className="back-link">&#60; Back</div>
-      <div className="product-title2">Title</div>
-      <div className="product-id">ID #</div>
+      <div className="product-title2">{product.title}</div>
+      <div className="product-id">{product.id}</div>
       <div className="product-image-container">
-        <img src={require("../images/Mens-Henley-Tee.png")} width="500px"></img>
+        <img src={product.image} alt="Product" width="300px" />
       </div>
-      <p className="product-detail-description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quaerat
-        sunt, aliquam odio, enim suscipit beatae possimus voluptatum iusto vitae
-        deleniti harum ab ipsa nulla, voluptate eius reprehenderit tempora modi!
-      </p>
+      <p className="product-detail-description">{product.description}</p>
       <div className="purchase-container">
         <div className="size-quantity-wrapper">
           <div className="size-container">
@@ -39,7 +35,7 @@ const ProductDetails = () => {
                 placeholder="1"
                 min={"1"}
                 max={"10"}
-                className="prouct-quantity"
+                className="product-quantity"
               ></input>
             </div>
           </div>

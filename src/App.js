@@ -14,6 +14,7 @@ import Featured from "./components/Featured";
 
 function App() {
   const [products, setProducts] = useState([]);
+  const [product, setProduct] = useState({});
   const [userData, setUserData] = useState([]);
   const [category, setCategory] = useState("all"); //"all", "electronics", "jewelery", "women's clothing", "men's clothing"
 
@@ -68,7 +69,6 @@ function App() {
         <Header />
         <NavBar setCategory={setCategory} />
         <div className="content">
-
           <Routes>
             <Route
               path="/"
@@ -79,12 +79,18 @@ function App() {
                 </>
               }
             />
-            <Route path="/shop" element={<Products products={products} />} />
+            <Route
+              path="/shop"
+              element={<Products setProduct={setProduct} products={products} />}
+            />
             <Route path="/featured" element={<Featured />} />
             <Route path="/support" element={<Support />} />
             <Route path="/contact" element={<Contact />} />
+            <Route
+              path="/product"
+              element={<ProductDetails product={product} />}
+            />
           </Routes>
-
         </div>
         <Footer />
       </div>

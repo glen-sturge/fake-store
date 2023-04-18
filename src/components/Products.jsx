@@ -2,11 +2,11 @@ import React from "react";
 import Product from "./Product";
 import "../App.css";
 
-const Products = ({ products }) => {
+const Products = ({ products, setProduct }) => {
   return (
     <div className="products-gallery">
       {products.map((product) => (
-        <Product key={product.id} product={product} />
+        <Product key={product.id} setProduct={setProduct} product={product} />
       ))}
     </div>
   );
