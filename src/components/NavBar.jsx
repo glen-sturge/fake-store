@@ -1,25 +1,19 @@
 import React from "react";
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import Modal from "./SignInModal";
-import RegisterModal from "./RegisterModal";
-
+import LoginSignupBtn from "./LoginSignupBtn";
 
 const NavBar = ({ addUser, users, login, setCategory }) => {
-
-  const [isActive, setIsActive] = useState(false);
-
-  const handleClick = () => {
-    setIsActive((current) => !current);
-  };
-
   const handleShopClick = () => {
     setCategory("all");
   };
 
-  const [show, setShow] = useState(false);
-
-  const [show2, setShow2] = useState(false);
+  const checkLogin = (loggedIn) => {
+    if (loggedIn === true) {
+      return <div>First Name + Last Name</div>; // Insert user's name here
+    } else {
+      return <LoginSignupBtn />;
+    }
+  };
 
   return (
     <div className="nav-bar-wrapper">
@@ -54,45 +48,8 @@ const NavBar = ({ addUser, users, login, setCategory }) => {
             Contact
           </Link>
         </div>
-        <div className="login-signup">
-          <button
-            className="login-btn"
-            style={{
-              backgroundColor: !isActive ? "#d1552e" : "",
-              color: !isActive ? "white" : "",
-            }}
-            onClick={() => setShow(true)}
-          >
-            Log in
-          </button>
-
-          <button
-            className="signup-btn"
-            style={{
-              backgroundColor: isActive ? "#d1552e" : "",
-              color: isActive ? "white" : "",
-            }}
-            // onClick={handleClick}
-            onClick={() => setShow2(true)}
-          >
-            Sign up
-          </button>
-        </div>
-        <Modal onClose={() => setShow(false)} show={show} />
-        <RegisterModal onClose={() => setShow2(false)} show2={show2} />
+        <div>{checkLogin()}</div>
       </div>
-      <Modal
-        onClose={() => setShow(false)}
-        show={show}
-        users={users}
-        login={login}
-      />
-      <RegisterModal
-        onClose={() => setShow2(false)}
-        show2={show2}
-        addUser={addUser}
-        users={users}
-      />
     </div>
   );
 };
