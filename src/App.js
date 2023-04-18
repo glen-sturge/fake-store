@@ -73,6 +73,8 @@ function App() {
           users={userData}
           login={setLoggedIn}
           setCategory={setCategory}
+          loggedIn={loggedIn}
+          logOut={logOut}
         />
         <div className="content">
           <Routes>
