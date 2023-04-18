@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 import Modal from "./SignInModal";
 import RegisterModal from "./RegisterModal";
 
-const NavBar = ({ setCategory }) => {
+
+const NavBar = ({ addUser, users, login, setCategory }) => {
+
   const [isActive, setIsActive] = useState(false);
 
   const handleClick = () => {
@@ -79,6 +81,18 @@ const NavBar = ({ setCategory }) => {
         <Modal onClose={() => setShow(false)} show={show} />
         <RegisterModal onClose={() => setShow2(false)} show2={show2} />
       </div>
+      <Modal
+        onClose={() => setShow(false)}
+        show={show}
+        users={users}
+        login={login}
+      />
+      <RegisterModal
+        onClose={() => setShow2(false)}
+        show2={show2}
+        addUser={addUser}
+        users={users}
+      />
     </div>
   );
 };

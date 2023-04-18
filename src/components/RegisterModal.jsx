@@ -1,15 +1,15 @@
 import React from "react";
 import Register from "./Register";
 
-const RegisterModal = (props) => {
-  if (!props.show2) {
+const RegisterModal = ({ onClose, show2, addUser, users }) => {
+  if (!show2) {
     return null;
   }
 
   return (
-    <div class="modal" onClick={props.onClose}>
-      <div class="modal-content" onClick={(e) => e.stopPropagation()}>
-        <Register />
+    <div className="modal" onClick={onClose}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <Register addUser={addUser} users={users} />
       </div>
     </div>
   );

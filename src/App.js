@@ -41,6 +41,8 @@ function App() {
     setUserData(updatedState);
   }
 
+
+  //For testing
   const showUserData = () => {
     console.log(userData);
   };
@@ -66,9 +68,8 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <NavBar setCategory={setCategory} />
+        <NavBar addUser={addUser} users={userData} login={setLoggedIn} />
         <div className="content">
-
           <Routes>
             <Route
               path="/"
@@ -84,7 +85,6 @@ function App() {
             <Route path="/support" element={<Support />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
-
         </div>
         <Footer />
       </div>
