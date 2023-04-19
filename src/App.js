@@ -89,7 +89,13 @@ function App() {
             />
             <Route
               path="/shop"
-              element={<Products setProduct={setProduct} products={products} />}
+              element={
+                <Products
+                  setProduct={setProduct}
+                  setCategory={setCategory}
+                  products={products}
+                />
+              }
             />
             <Route path="/featured" element={<Featured />} />
             <Route path="/support" element={<Support />} />

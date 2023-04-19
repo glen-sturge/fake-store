@@ -96,6 +96,31 @@ a {
   flex-wrap: wrap;
 }
 
+.products-select {
+  display: flex;
+  width: 100%;
+  padding: 0 0 0 10px;
+}
+
+.select-category {
+  width: 160px;
+  text-align: left;
+  font-weight: 700;
+  height: 42px;
+  padding: 0 0 0 4px;
+}
+
+/* .select-category option {
+  width: 150px;
+  
+  font-weight: 700;
+} */
+
+.products-gallery-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Number Input With Buttons */
 .number-input {
   display: flex;
@@ -548,7 +573,14 @@ select {
 }
 
 /* Product Details */
+.product-details-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .product-details {
+  max-width: 1250px;
+  width: 100%;
   font-family: "Judson", serif;
 }
 
@@ -572,7 +604,9 @@ select {
 
 .product-detail-description {
   background-color: #d9d9d9;
-  width: 1056px;
+  word-wrap: break-word;
+  max-width: 1056px;
+  width: 100%;
   height: auto;
   margin: 10px auto 10px auto;
   padding: 30px;
@@ -580,20 +614,21 @@ select {
 
 .purchase-container {
   display: flex;
-  justify-content: center;
-  margin: 50px;
+  justify-content: space-between;
+  border: #3e8e41 solid 2px;
 }
 
 .size-quantity-wrapper {
-  align-self: center;
-  margin-right: 30px;
+  max-width: 300px;
+  width: 100%;
+  border: purple 1px solid;
 }
 
 .size-container {
   display: flex;
-  justify-items: center;
+  justify-content: space-between;
   align-items: center;
-  width: 300px;
+  width: 230px;
   border: yellow 1px solid;
 }
 
@@ -609,10 +644,16 @@ select {
 }
 
 .product-quantity {
-  width: 50px;
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  font-weight: 700;
+  border: solid #adadad 1px;
+  border-radius: 8px;
+  box-shadow: #adadad 1px 1px;
 }
 
-.quantity-select {
+.size-select {
   width: 120px;
   height: 50px;
 }
