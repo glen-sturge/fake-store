@@ -1,7 +1,7 @@
 import React from "react";
 import SignIn from "./SignIn";
 
-const Modal = ({ onClose, show, addUser, users, login }) => {
+const Modal = ({ onClose, show, addUser, users, login, onHere }) => {
   if (!show) {
     return null;
   }
@@ -9,7 +9,7 @@ const Modal = ({ onClose, show, addUser, users, login }) => {
   return (
     <div className="modal" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <SignIn users={users} login={login} />
+        <SignIn users={users} login={login} onClose={onClose} onHere={onHere} />
       </div>
     </div>
   );
