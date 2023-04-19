@@ -3,15 +3,22 @@ import "../App.css";
 import { Link } from "react-router-dom";
 
 const Product = ({ product, setProduct }) => {
+  //cuts down long descriptions for the product cards.
   const truncDesc = () => {
     return product.description.length > 120
       ? `${product.description.slice(0, 120)}...`
       : product.description;
   };
 
+  //for productDetails
   const handleClick = () => {
     setProduct(product);
   };
+
+  const handleAdd = () => {
+    alert("Site is still under construction.");
+  };
+
   return (
     <div className="product-card">
       <div className="product-title">
@@ -30,7 +37,7 @@ const Product = ({ product, setProduct }) => {
         </p>
         <p className="product-price">Price: ${product.price.toFixed(2)}</p>
       </div>
-      <button>Add to Cart</button>
+      <button onClick={handleAdd}>Add to Cart</button>
     </div>
   );
 };
