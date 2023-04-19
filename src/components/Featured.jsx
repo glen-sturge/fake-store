@@ -1,5 +1,7 @@
 import React from "react";
 
+// Component for the Featured Items Page
+
 const Featured = () => {
   return (
     <div className="featured-page">

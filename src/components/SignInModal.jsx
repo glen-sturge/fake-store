@@ -1,6 +1,8 @@
 import React from "react";
 import SignIn from "./SignIn";
 
+// Component for the sign In Modal
+
 const Modal = ({ onClose, show, addUser, users, login }) => {
   if (!show) {
     return null;

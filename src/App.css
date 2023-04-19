@@ -554,7 +554,8 @@ select {
 }
 
 .login-btn {
-  background-color: transparent;
+  background-color: #d1552e;
+  color: white;
   padding: 10px;
   border: none;
   border-radius: 10px;
@@ -676,7 +677,7 @@ select {
   align-self: center;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   -webkit-text-stroke: 1px black;
-  margin: 0 30px 0 20px;
+  margin: 0 150px 0 0;
 }
 
 .add-cart-btn-container {
@@ -800,7 +801,6 @@ select {
   flex-direction: column;
   justify-content: space-between;
   padding-block: 30px;
-  height: 20vh;
   max-width: 1250px;
   width: 100%;
 }
