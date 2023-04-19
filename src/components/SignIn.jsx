@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "../App.css";
 
-const SignIn = ({ users, login }) => {
+const SignIn = ({ users, login, onClose, onHere }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    //cool code to handle checking the username and password against the db.json file holding "user-data".
+    //cool code to handle checking the username and password against the user-data.
     //Will hand back error messages if data is not found or incorrect in the case of password.
 
     //Validation
@@ -35,6 +35,12 @@ const SignIn = ({ users, login }) => {
     //clear form
     setEmail("");
     setPassword("");
+    onClose();
+  };
+
+  const handleHereClick = () => {
+    onClose();
+    onHere();
   };
 
   return (
@@ -63,7 +69,7 @@ const SignIn = ({ users, login }) => {
         <p className="dont-have">
           <strong>
             Don't have an account? Sign up{" "}
-            <a href="#">
+            <a href="#" onClick={handleHereClick}>
               <em>here</em>.
             </a>
           </strong>

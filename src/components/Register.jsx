@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../db.json";
 
-const Register = ({ addUser, users }) => {
+const Register = ({ addUser, users, onClose }) => {
   //values for registration
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -74,6 +74,8 @@ const Register = ({ addUser, users }) => {
     setDob("");
     setGender("");
     setPhone("");
+
+    onClose();
   };
 
   const capitalizeFirst = (string) => {

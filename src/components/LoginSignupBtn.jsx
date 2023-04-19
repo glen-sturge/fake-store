@@ -38,6 +38,7 @@ const LoginSignupBtn = ({ addUser, users, login }) => {
         Sign up
       </button>
       <Modal
+        onHere={() => setShow2(true)}
         onClose={() => setShow(false)}
         show={show}
         addUser={addUser}
