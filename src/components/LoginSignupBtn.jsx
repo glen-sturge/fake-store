@@ -46,6 +46,7 @@ const LoginSignupBtn = ({ addUser, users, login }) => {
         login={login}
       />
       <RegisterModal
+        onAlready={() => setShow(true)}
         onClose={() => setShow2(false)}
         show2={show2}
         addUser={addUser}

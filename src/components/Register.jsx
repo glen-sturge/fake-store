@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../db.json";
 
-const Register = ({ addUser, users, onClose }) => {
+const Register = ({ addUser, users, onClose, onAlready }) => {
   //values for registration
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -78,6 +78,11 @@ const Register = ({ addUser, users, onClose }) => {
     onClose();
   };
 
+  const handleAlready = () => {
+    onClose();
+    onAlready();
+  };
+
   const capitalizeFirst = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
@@ -142,6 +147,14 @@ const Register = ({ addUser, users, onClose }) => {
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
         />
+        <p className="dont-have">
+          <strong>
+            Already have an account?
+            <a href="#" onClick={handleAlready}>
+              <em>here</em>.
+            </a>
+          </strong>
+        </p>
         <button type="submit">Join</button>
       </form>
     </div>
