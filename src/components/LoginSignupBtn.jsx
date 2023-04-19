@@ -23,6 +23,7 @@ const LoginSignupBtn = ({ addUser, users, login }) => {
       </button>
       {/* Login Modal */}
       <Modal
+        onHere={() => setShow2(true)}
         onClose={() => setShow(false)}
         show={show}
         addUser={addUser}
@@ -31,6 +32,7 @@ const LoginSignupBtn = ({ addUser, users, login }) => {
       />
       {/* Sign up Modal */}
       <RegisterModal
+        onAlready={() => setShow(true)}
         onClose={() => setShow2(false)}
         show2={show2}
         addUser={addUser}

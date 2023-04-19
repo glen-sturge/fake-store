@@ -616,7 +616,7 @@ select {
 .purchase-container {
   display: flex;
   justify-content: space-between;
-  border: #3e8e41 solid 2px;
+  /* border: #3e8e41 solid 2px; */
 }
 
 .size-quantity-wrapper {
