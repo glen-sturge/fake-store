@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// Component for the homepage featured or sale items.
+
 const SaleBanner = () => {
   return (
     <div className="sale-banner-wrapper">

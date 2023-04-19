@@ -1,5 +1,7 @@
 import React from "react";
 
+// Component for the Support page
+
 const Support = () => {
   return (
     <div className="support-page-wrapper">

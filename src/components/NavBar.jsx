@@ -3,15 +3,20 @@ import { Link } from "react-router-dom";
 import LoginSignupBtn from "./LoginSignupBtn";
 import { useState } from "react";
 
+// Navigation Bar Component
+
 const NavBar = ({ addUser, users, login, setCategory, loggedIn, logOut }) => {
+  // Directs the user to the shop page.
   const handleShopClick = () => {
     setCategory("all");
   };
 
   const user = JSON.parse(localStorage.getItem("userData"));
 
+  // Function to check if a user is logged in or not.
   const checkLogin = (loggedIn) => {
     if (loggedIn === true) {
+      // If logged in display the user's name and a log out button.
       return (
         <div className="logged-in-wrapper">
           <div className="username">
@@ -28,6 +33,7 @@ const NavBar = ({ addUser, users, login, setCategory, loggedIn, logOut }) => {
         </div>
       );
     } else {
+      // If not logged in display the login/ sign up button.
       return <LoginSignupBtn addUser={addUser} users={users} login={login} />;
     }
   };

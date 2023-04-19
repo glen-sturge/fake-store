@@ -1,7 +1,11 @@
 import React from "react";
 import Register from "./Register";
 
+
+// Component for the Sign up modal
+
 const RegisterModal = ({ onClose, show2, addUser, users, onAlready }) => {
+
   if (!show2) {
     return null;
   }

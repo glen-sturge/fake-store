@@ -1,5 +1,7 @@
 import React from "react";
 
+// Component for the Contact Information page.
+
 const Contact = () => {
   return (
     <div className="contact-container">

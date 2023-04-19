@@ -3,40 +3,25 @@ import { useState } from "react";
 import Modal from "./SignInModal";
 import RegisterModal from "./RegisterModal";
 
+// Component for the Login/ Sign up button on the Naigation Bar.
+
 const LoginSignupBtn = ({ addUser, users, login }) => {
   const [isActive, setIsActive] = useState(false);
-
-  const handleClick = () => {
-    setIsActive((current) => !current);
-  };
 
   const [show, setShow] = useState(false);
 
   const [show2, setShow2] = useState(false);
   return (
     <div className="login-signup">
-      <button
-        className="login-btn"
-        style={{
-          backgroundColor: !isActive ? "#d1552e" : "",
-          color: !isActive ? "white" : "",
-        }}
-        onClick={() => setShow(true)}
-      >
+      {/* Login button */}
+      <button className="login-btn" onClick={() => setShow(true)}>
         Log in
       </button>
-
-      <button
-        className="signup-btn"
-        style={{
-          backgroundColor: isActive ? "#d1552e" : "",
-          color: isActive ? "white" : "",
-        }}
-        // onClick={handleClick}
-        onClick={() => setShow2(true)}
-      >
+      {/* Sign up button */}
+      <button className="signup-btn" onClick={() => setShow2(true)}>
         Sign up
       </button>
+      {/* Login Modal */}
       <Modal
         onHere={() => setShow2(true)}
         onClose={() => setShow(false)}
@@ -45,6 +30,7 @@ const LoginSignupBtn = ({ addUser, users, login }) => {
         users={users}
         login={login}
       />
+      {/* Sign up Modal */}
       <RegisterModal
         onAlready={() => setShow(true)}
         onClose={() => setShow2(false)}

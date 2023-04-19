@@ -1,16 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// Component to display the product category grid on the home page.
+
 const ProductGrid = ({ setCategory }) => {
+  // Directs the user to the Men's Clothing Category.
   const handleMensClick = () => {
     setCategory("men's clothing");
   };
+
+  // Directs the user to the Women's Clothing Category.
   const handleWomenClick = () => {
     setCategory("women's clothing");
   };
+
+  // Directs the user to the Electronics's Category.
   const handleElectronicsClick = () => {
     setCategory("electronics");
   };
+
+  // Directs the user to the Jewlery Category.
   const handleJewelryClick = () => {
     setCategory("jewelery");
   };
