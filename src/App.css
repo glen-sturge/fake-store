@@ -910,8 +910,64 @@ hr {
 .featured-page {
   font-family: "Judson", serif;
   margin: 30px 50px 30px 50px;
+}
+
+.featured-subtitle {
+  margin: 10px 0 30px 0;
+  color: #5c5c5c;
+}
+
+.feat-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.feat-image {
+  background-color: #424046;
+  padding: 20px;
   width: fit-content;
+  border-radius: 10px;
+}
+
+.feat-description {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 50px;
+}
+
+.feat-item-descp {
+  width: 400px;
   text-align: left;
+  margin: 10px 0 10px 0;
+}
+
+.times-purchased {
+  text-align: left;
+}
+
+.feat-description2 {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 70px;
+}
+
+.feat-item-descp2 {
+  width: 600px;
+  text-align: left;
+  margin: 10px 0 10px 0;
+}
+
+.feat-description3 {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 15px;
+}
+
+.feat-item-descp3 {
+  width: 500px;
+  text-align: left;
+  margin: 10px 0 10px 0;
 }
 
 /* Modal */
