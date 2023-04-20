@@ -91,7 +91,7 @@ const Register = ({ addUser, users, onClose, onAlready }) => {
     onAlready();
   };
 
-  //Auto capitalize.
+  //Auto capitalize for names.
   const capitalizeFirst = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };

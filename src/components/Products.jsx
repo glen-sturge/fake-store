@@ -3,6 +3,7 @@ import Product from "./Product";
 import "../App.css";
 
 const Products = ({ products, setProduct, setCategory }) => {
+  // for category select
   const handleChange = (e) => {
     // console.log(e.target.value);
     setCategory(e.target.value);

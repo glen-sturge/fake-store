@@ -1,8 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Product from "./Product";
-import { useState } from "react";
-import { useEffect } from "react";
 
 const ProductDetails = ({ product }) => {
   return (

@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+// we didn't use this component afterwards...
+//Just a number input with external up and down buttons.
 function NumberInput() {
   const [value, setValue] = useState(0);
 

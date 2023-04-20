@@ -23,9 +23,8 @@ const SignIn = ({ users, login, onClose, onHere }) => {
     //take the password out.
     const userData = users.find((user) => user.email === email);
     // console.log(userData);
-
     const { password: rename, ...userDataToSave } = userData;
-    console.log(userDataToSave);
+    // console.log(userDataToSave);
 
     //save login state
     localStorage.setItem("isLoggedIn", "true");
@@ -38,6 +37,7 @@ const SignIn = ({ users, login, onClose, onHere }) => {
     onClose();
   };
 
+  //switch modals
   const handleHereClick = () => {
     onClose();
     onHere();

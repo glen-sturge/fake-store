@@ -18,6 +18,7 @@ function App() {
   const [userData, setUserData] = useState([]);
   const [category, setCategory] = useState("all"); //"all", "electronics", "jewelery", "women's clothing", "men's clothing"
 
+  // fetch from api
   useEffect(() => {
     async function fetchProducts() {
       let response;
@@ -43,9 +44,9 @@ function App() {
   }
 
   //For testing
-  const showUserData = () => {
-    console.log(userData);
-  };
+  // const showUserData = () => {
+  //   console.log(userData);
+  // };
 
   const [loggedIn, setLoggedIn] = useState(false);
 

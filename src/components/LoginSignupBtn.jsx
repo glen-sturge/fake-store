@@ -6,11 +6,10 @@ import RegisterModal from "./RegisterModal";
 // Component for the Login/ Sign up button on the Naigation Bar.
 
 const LoginSignupBtn = ({ addUser, users, login }) => {
-  const [isActive, setIsActive] = useState(false);
-
+  // for modals
   const [show, setShow] = useState(false);
-
   const [show2, setShow2] = useState(false);
+
   return (
     <div className="login-signup">
       {/* Login button */}

@@ -273,13 +273,6 @@ select {
   color: black;
 }
 
-/* Webkit browsers like Safari and Chrome */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
 /* Registration form */
 .register-form {
   box-shadow: #0000002c 8px 8px;
@@ -622,7 +615,7 @@ select {
 .size-quantity-wrapper {
   max-width: 300px;
   width: 100%;
-  border: purple 1px solid;
+  /* border: purple 1px solid; */
 }
 
 .size-container {
@@ -630,7 +623,7 @@ select {
   justify-content: space-between;
   align-items: center;
   width: 230px;
-  border: yellow 1px solid;
+  /* border: yellow 1px solid; */
 }
 
 /* .dropdown-size {

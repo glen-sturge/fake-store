@@ -15,6 +15,7 @@ const Product = ({ product, setProduct }) => {
     setProduct(product);
   };
 
+  // no cart :(
   const handleAdd = () => {
     alert("Site is still under construction.");
   };
